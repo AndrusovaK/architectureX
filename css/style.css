@@ -121,7 +121,7 @@ h2 {
 	vertical-align: middle;
 }
 
-p.main-text {
+.main-text {
 	text-align: center;
 	line-height: 48px;
 	margin: 0;
@@ -224,48 +224,87 @@ p.main-text {
 	background-size: cover;
 }
 
-.projects nav.project-switcher {
-    width: 640px;
+.projects .main-text {
+	margin-bottom: 27px;
+}
+
+/* Стили для табов-вкладок */
+.tabs_block {
+    width: 100%;
+	min-height: 445px;
+    margin: 0 auto;
+}
+.tabs_block:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+/* панель навигации вкладок */
+.tabs {
+    width: 650px;
     font: bold 14px 'Montserrat', sans-serif;
-	line-height: 48px;
     padding: 0px;
 	text-align: center;
 	margin: 0 auto 30px auto;
+    list-style: none;
 }
-
-nav.project-switcher a {
-    text-decoration: none;
+/* список вкладок */
+.tabs li {
+	display: inline-block;
     color: #4a4a4a;
     padding-bottom: 8px;
+	margin-bottom: 35px;
     text-transform: uppercase;
     margin-left: 20px;
+    cursor:pointer;
+/*
+    -webkit-transition:all .2s linear 0s;
+    -webkit-transition-delay:.2s 0s;
+    transition:all .2s linear 0s;
+*/
 }
 
-nav.project-switcher a:first-child {
-    margin-left: 0px;
+.tabs li:first-child {
+	margin-left: 0;
+}
+/* активная вкладка */
+.tabs li.active {
+	color: #131313;
+	position: relative;
 }
 
-nav.project-switcher a:visited {
-    text-decoration: none;
-    color: #4a4a4a;
+.tabs li.active:after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 2px;
+	background-color: #131313;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+/* блоки вкладок с содержанием */
+.box {
+    display:none;
 }
 
-nav.project-switcher a.active  {
-    color: #131313;
+/* активный блок при загрузке */
+.visible, .open_tab {
+    display: block;
 }
 
-nav.project-switcher a.active span {
-    padding-bottom: 8px;
-	border-bottom: 2px solid #131313;
-}
 
+/*
 
 .project-item {
 	width: 1110px;
 	margin: 0;
 	padding: 0;
 }
+*/
 
+/*
 .layout-column1 {
 	float: left;
 	width: 380px;
@@ -352,6 +391,11 @@ nav.project-switcher a.active span {
 	text-transform: uppercase;
 	padding: 85px 25px 0 25px;
 }
+*/
+
+
+
+
 
 /*Карусель клиентов*/
 
