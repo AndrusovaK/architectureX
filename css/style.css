@@ -248,32 +248,32 @@ h2 {
 	margin: 0 auto 30px auto;
     list-style: none;
 }
-/* список вкладок */
-.tabs li {
-	display: inline-block;
-    color: #4a4a4a;
+
+.tabs__item {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.tabs__item a {
+	color: #4a4a4a;
     padding-bottom: 8px;
 	margin-bottom: 35px;
     text-transform: uppercase;
-    margin-left: 20px;
-    cursor:pointer;
-/*
-    -webkit-transition:all .2s linear 0s;
-    -webkit-transition-delay:.2s 0s;
-    transition:all .2s linear 0s;
-*/
+	text-decoration: none;
 }
 
-.tabs li:first-child {
-	margin-left: 0;
+.tabs__item:last-child {
+	margin-right: 0;
 }
 /* активная вкладка */
-.tabs li.active {
+.tabs__item--active a {
 	color: #131313;
 	position: relative;
 }
 
-.tabs li.active:after {
+.tabs__item--active a:after {
 	content: '';
 	position: absolute;
 	width: 25px;
@@ -284,14 +284,13 @@ h2 {
 	right: 0;
 	margin: 0 auto;
 }
-/* блоки вкладок с содержанием */
-.box {
-    display:none;
+
+.tabs-content__item {
+  display: none;
 }
 
-/* активный блок при загрузке */
-.visible, .open_tab {
-    display: block;
+.tabs-content__item--active {
+  display: block;
 }
 
 
